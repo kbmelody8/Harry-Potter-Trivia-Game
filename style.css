@@ -1,1 +1,4 @@
-/* Karina-Baikanova-SEI-Project1 */
+/* for the active category in the menu */
+.categories-active{
+    background-color: gold;
+}
