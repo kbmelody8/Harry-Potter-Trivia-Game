@@ -1,23 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trivia</title>
     <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
+    <script defer src="app.js"></script>
 </head>
+
 <body>
-    <h1>Harry Potter Trivia Game</h1>
-    <!-- Game category selection menu -->
-    <ul id="categories">
-        <li id="houses">Houses</li>
-        <li id="characters">Characters</li>
-        <li id="spells">Spells</li>
-        <li id="random">Random</li>
-    </ul>
-    <!-- Button to start the game -->
-    <button id="play">Play</button>
-    <script type="module" src="app.js"></script>
+    <div class="wrapper">
+        <header>
+            <div class="container">
+                <h1>Harry Potter Trivia Game</h1>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <h3> 🪄✨ Welcome to the Enchanting World of Harry Potter Trivia! ✨🪄</h3>
+                <br>
+                <h4>Game Instructions:</h4>
+                <p> Choose Your Magical Category:</p>
+                <ol class = "instructions"> 
+                    <!-- List of game instructions -->
+                    <li>To embark on your wizarding journey, select one of the four enchanting categories - Houses,
+                        Characters, Spells, or Random.</li>
+                    <li>Earn Magical Points:
+                        <p>Correct Answer: Gain 1 point.</p>
+                        <p>Incorrect Answer: Lose 1 point.</p>
+                        <p>Answer within 15 seconds: Earn 2 points.</p>
+                    </li>
+                    <li> Beware the Enchanted Timer:
+                        <!-- Timer-related instructions -->
+                        <p>Correct Answer: Gain 1 point.</p>
+                        <p>Incorrect Answer: Lose 1 point.</p>
+                        <p>Answer within 15 seconds: Earn 2 points.</p>
+                        <p>Each question has a 30-second time limit.</p>
+                        <p>Answer within the time limit to proceed to the next question.</p>
+                        <p>If you answer after 30 seconds:</p>
+                        <p>First 3 times: Continue the game with a warning.</p>
+                        <p>Subsequent times: Face the peril of Game Over.</p>
+                    </li>
+                    <li>Wizarding Challenges:
+                        <!-- Points -->
+                        <p>You have 5 chances to answer incorrectly.</p>
+                        <p>Answer incorrectly 5 times, and you'll face a magical setback.</p>
+                    </li>
+                    <li>Master the Magical Arts.
+                        <p>Prove your wizarding prowess by answering as many questions as you can and accumulate magical
+                            points to become a true wizard! May the magic be ever in your favor.</p>
+                    </li>
+                </ol>
+                <!-- Game category selection menu -->
+                <br>
+                <h2>Please choose a category:</h2>
+                <ul id="categories" class="category">
+                    <li id="houses">Houses</li>
+                    <li id="characters">Characters</li>
+                    <li id="spells">Spells</li>
+                    <li id="random">Random</li>
+                </ul>
+                <!-- Button to start the game -->
+                <div class = "btn-wrapper">
+                <button id="play">Play</button>
+                </div>
+            </div>
+        </main>
+    </div>
 </body>
+
 </html>
