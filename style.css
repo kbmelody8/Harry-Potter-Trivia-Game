@@ -1,4 +1,105 @@
 /* for the active category in the menu */
-.categories-active{
+/* Imported Google Font */
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&family=Roboto&display=swap');
+
+body {
+    box-sizing: border-box;
+    /* font-family: 'PT Sans Narrow', sans-serif; */
+    font-family: 'Roboto', sans-serif;
+}
+
+#categories .categories-active{
     background-color: gold;
+    border: 2px solid brown;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+}
+
+.wrapper {
+    background-image: url("./image/79504d8ef4cec62a50331b0dd46beb57.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 12rem;
+}
+.container-new{
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+header {
+    text-align:center;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.instructions {
+    list-style-type: decimal;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+}
+.instructions p {
+    margin-top: 5px;
+    line-height: 20px;
+    font-size: 18px;
+}
+.category {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 15px;
+    margin: 20px 0;
+}
+#play {
+   padding: 20px 40px;
+   font-size: 26px;
+   border-radius: 6px;
+   background-color: gold;
+   text-align: center;
+   max-width: 400px;
+   width: 100%;
+}
+
+.category li {
+font-size: 26px;
+font-weight: bold;
+text-transform: uppercase;
+border: gold solid 2px;
+padding: 10px;
+text-align: center;
+background-color: brown;
+cursor: pointer;
+}
+
+.error {
+    color: red;
+    background-color: gold;
+    text-align: center;
+    font-size: 26px;
+    padding: 20px 40px;
+    margin-top: 20px;
+    border-radius: 6px;
+    max-width: 400px;
+    width: 100%;
+}
+
+.btn-wrapper {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
