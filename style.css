@@ -4,7 +4,6 @@
 
 body {
     box-sizing: border-box;
-    /* font-family: 'PT Sans Narrow', sans-serif; */
     font-family: 'Roboto', sans-serif;
 }
 
@@ -24,12 +23,12 @@ button {
 }
 
 .wrapper {
-    background-image: url("./image/79504d8ef4cec62a50331b0dd46beb57.jpeg");
+    background-image: url("./image/Hogwarts.png");
     background-repeat: no-repeat;
     background-size: cover;
     padding: 12rem;
 }
-.container-new{
+.container{
     margin: 0 auto;
     max-width: 1200px;
 }
