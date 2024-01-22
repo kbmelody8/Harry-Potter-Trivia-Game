@@ -50,3 +50,5 @@ btnPlay.addEventListener("click", (e) => {
         // Add the active class to the clicked category
         target.classList.add("categories-active");
     });
+
+    

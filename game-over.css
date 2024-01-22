@@ -1,0 +1,69 @@
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+}
+
+.wrapper {
+    background-image: url("./image/avada-kedavra.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 2rem; 
+    width: 100%; 
+    max-width: 1700px; 
+    box-sizing: border-box;
+}
+
+.container {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+header {
+    margin-top: 50px;
+    color: brown;
+    text-align:center;
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 25px;
+}
+.main-wrapper {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    color: brown;
+}
+
+h2 {
+    font-size: 60px;
+    font-weight: bold;
+    margin-top: 400px;
+    margin-bottom: 200px;
+}
+
+.start {
+    color: red;
+    background-color: gold;
+    text-align: center;
+    font-size: 26px;
+    padding: 20px 40px;
+    margin-top: 20px;
+    border-radius: 6px;
+    max-width: 400px;
+    width: 100%;
+    display: inline-block;
+}
+
+h3 {
+    font-size: 32px;
+    font-weight: bold;
+}
