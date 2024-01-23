@@ -1,3 +1,26 @@
+// Initial time for the timer in ms
+let timer = 30000;
+// Variable to track remaining time for each question
+let timeToNext = timer;
+// Counter for correct answers
+let pointCounter = 0;
+// Counter for wrong answers
+let wrongAnswersCount = 0;
+// Counter for late answers
+let lateAnswers = 0;
+// Extracting the current page's URL
+const url = window.location.href.split("/").slice(-1);
+// Extracting the category from the URL
+const category = url[0].split(".")[0];
+// Array to store past questions to avoid repetition
+const pastQuestions = [];
+// Display element for the timer
+const timerDisplay = document.getElementById("timer-display");
+// Array to store wrong answers for review or tracking
+const wrongAnswers = [];
+
+
+
 // Define questions for different categories
 const questions = {
     "houses": [
@@ -654,3 +677,120 @@ const questions = {
     ]
 };
 
+
+// Function to randomize questions for a given category
+function randomizeQuestions(category, question) {
+    // Extract questions for the specified category
+    const questionCategory = question[category];
+    // Check if there are no more questions left for the category
+    if (!questionCategory.length) {
+        return "There are no more questions left";
+    }
+    // Generate a random index to select a question
+    let randomIndex = Math.floor(Math.random() * questionCategory.length);
+    // Retrieve the random question
+    let randomElement = questionCategory[randomIndex];
+    // Add the selected question to the list of past questions
+    pastQuestions.push(randomElement);
+    // Remove the selected question from the available questions
+    questionCategory.splice(randomIndex, 1);
+    // Update the questions object with the modified question list
+    questions[category] = questionCategory;
+    // Return the randomly selected question
+    return randomElement;
+}
+
+// Function to render a question in the specified category
+function renderQuestion(category, questions) {
+    // Get a random question for the specified category
+    const question = randomizeQuestions(category, questions);
+    // Get the parent element to render the question
+    const questionParent = document.getElementById("question");
+    questionParent.innerText = "";
+    // Render the question and options
+    //The insertAdjacentHTML() method inserts HTML code into a specified position.
+    //beforeend:	Before the end of the element (last child)
+    //As per: https://www.w3schools.com/jsref/met_node_insertadjacenthtml.asp
+    questionParent.insertAdjacentHTML("beforeend", `<div id=${question.id}>
+            <h2>${question.question}</h2>
+            <ul class="question">${question.options.map(item => (`<li class="question-item" id=${item.split(" ")[0]}>${item}</li>`)).join("")}</ul>
+        </div>`);
+    // Add an event listener to handle user's answer
+    const answer = document.getElementById(question.id);
+    answer.addEventListener("click", handleAnswer);
+}
+renderQuestion(category, questions);
+
+// Function to handle the selected answer
+function handleAnswer(e) {
+    // Get the clicked element
+    const eTarget = e.target;
+    if (!eTarget.classList.contains("question-item")) {
+        return;
+    }
+    // Extract the text content of the clicked element (the chosen answer)
+    const answer = eTarget.textContent;
+    // Find the corresponding question in the pastQuestions array based on the id
+    const findAnswer = pastQuestions[pastQuestions.length-1]
+    // Check if the chosen answer is correct
+    if (findAnswer.answer === answer){
+        // Add the 'answer-active' class for styling
+        eTarget.classList.add("answer-active");
+        // Check the timer value and update the pointCounter accordingly
+        if (timeToNext < 15000) {
+            pointCounter += findAnswer.points;
+        }
+        if (timeToNext > 15000) {
+            pointCounter += findAnswer.bonusPoints;
+        }
+        
+        // Check if there are no more questions in the category, redirect to score.html
+        if (!questions[category].length) {
+            localStorage.setItem("score",pointCounter)
+            window.location.assign(`score.html`);
+        }
+
+        // If there are more questions, render the next question after a delay
+        if (questions[category]) {
+            setTimeout(() => {
+                renderQuestion(category, questions);
+            }, 3000);
+        }
+    }
+    // If the chosen answer is incorrect
+    if (findAnswer.answer !== answer) {
+        // Increment the count of incorrect answers
+        wrongAnswersCount += 1;
+
+        // Add the 'wrong-active' class for styling
+        eTarget.classList.add("wrong-active");
+
+        // Display the correct answer after a delay
+        setTimeout(() => {
+            const correctAnswer = document.getElementById(findAnswer.answer.split(" ")[0]);
+            correctAnswer.classList.add("answer-active");
+        }, 2000);
+
+        // Check if it's game over after 5 incorrect answers
+        if (wrongAnswersCount >= 5) {
+            setTimeout(() => {
+                window.location.assign(`game-over.html`);
+            }, 5000);
+            return;
+        }
+
+        // Continue the game by rendering the next question after a delay
+        setTimeout(() => {
+            renderQuestion(category, questions);
+        }, 3000);
+    }
+}
+
+//Logic?
+// function manages a countdown timer, updates the display, and triggers actions when the timer 
+//reaches zero (rendering next q? ending game if player answered late)
+//
+
+function createInterval () {
+
+}

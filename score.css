@@ -9,12 +9,12 @@ button {
 }
 
 .wrapper {
-    background-image: url("./image/Hogwarts.png");
+    background-image: url("./image/hpbackground.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     padding: 2rem; 
     width: 100%; 
-    max-width: 1700px; 
+    max-width: 100%; 
     box-sizing: border-box;
     height: 100vh;
 }
