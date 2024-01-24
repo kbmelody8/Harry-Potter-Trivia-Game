@@ -1,5 +1,5 @@
 // Retrieve the 'score' value from the localStorage
-////https://www.w3schools.com/jsref/prop_win_localstorage.asp
+////Reference: https://www.w3schools.com/jsref/prop_win_localstorage.asp
 const score = localStorage.getItem("score");
 
 // Find the HTML element with the class 'score'

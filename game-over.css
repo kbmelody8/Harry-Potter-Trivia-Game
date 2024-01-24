@@ -14,8 +14,9 @@ button {
     background-size: cover;
     padding: 2rem; 
     width: 100%; 
-    max-width: 1700px; 
+    max-width: 1900px; 
     box-sizing: border-box;
+    height: 100vh;
 }
 
 .container {
