@@ -1,6 +1,6 @@
 // Initial time for the timer in ms
 let timer = 30000;
-// Variable to track remaining time for each question
+// Var to track remaining time for each question
 let timeToNext = timer;
 // Counter for correct answers
 let pointCounter = 0;
@@ -18,8 +18,8 @@ const pastQuestions = [];
 const timerDisplay = document.getElementById("timer-display");
 // Array to store wrong answers for review or tracking
 const wrongAnswers = [];
-
-
+// Var to store the interval reference for the timer
+let interval = null;
 
 // Define questions for different categories
 const questions = {
@@ -709,8 +709,8 @@ function renderQuestion(category, questions) {
     questionParent.innerText = "";
     // Render the question and options
     //The insertAdjacentHTML() method inserts HTML code into a specified position.
-    //beforeend:	Before the end of the element (last child)
-    //As per: https://www.w3schools.com/jsref/met_node_insertadjacenthtml.asp
+    //beforeend: Before the end of the element (last child)
+    //Reference: https://www.w3schools.com/jsref/met_node_insertadjacenthtml.asp
     questionParent.insertAdjacentHTML("beforeend", `<div id=${question.id}>
             <h2>${question.question}</h2>
             <ul class="question">${question.options.map(item => (`<li class="question-item" id=${item.split(" ")[0]}>${item}</li>`)).join("")}</ul>
@@ -731,9 +731,9 @@ function handleAnswer(e) {
     // Extract the text content of the clicked element (the chosen answer)
     const answer = eTarget.textContent;
     // Find the corresponding question in the pastQuestions array based on the id
-    const findAnswer = pastQuestions[pastQuestions.length-1]
+    const findAnswer = pastQuestions[pastQuestions.length - 1]
     // Check if the chosen answer is correct
-    if (findAnswer.answer === answer){
+    if (findAnswer.answer === answer) {
         // Add the 'answer-active' class for styling
         eTarget.classList.add("answer-active");
         // Check the timer value and update the pointCounter accordingly
@@ -743,10 +743,10 @@ function handleAnswer(e) {
         if (timeToNext > 15000) {
             pointCounter += findAnswer.bonusPoints;
         }
-        
+
         // Check if there are no more questions in the category, redirect to score.html
         if (!questions[category].length) {
-            localStorage.setItem("score",pointCounter)
+            localStorage.setItem("score", pointCounter)
             window.location.assign(`score.html`);
         }
 
@@ -786,11 +786,32 @@ function handleAnswer(e) {
     }
 }
 
-//Logic?
-// function manages a countdown timer, updates the display, and triggers actions when the timer 
-//reaches zero (rendering next q? ending game if player answered late)
-//
-
-function createInterval () {
-
+//Function that manages a countdown timer, updates the display, and triggers actions when the timer 
+//reaches zero (rendering next question, ending game if player answered late more than 3 times)
+function createInterval() {
+    // Set up a recurring timer using setInterval
+    return setInterval(() => {
+        // Decrease the remaining time by 10 milliseconds
+        timeToNext -= 10;
+        // Check if the remaining time has reached or gone below zero
+        if (timeToNext <= 0) {
+            // Reset the timer to its initial value
+            timeToNext = timer;
+            // Render the next question, indicating a late answer
+            renderQuestion(category, questions);
+            // Increment the count of late answers
+            lateAnswers += 1;
+            // Check if the user has given late answers three times, redirect to game-over.html
+            if (lateAnswers >= 3) {
+                setTimeout(() => {
+                    window.location.assign(`game-over.html`);
+                }, 1000);
+                return;
+            }
+        }
+        // Update the timer display with the remaining time in seconds 
+        // The toFixed() method rounds the number to a specified number of decimals
+        // Reference: https://www.w3schools.com/jsref/jsref_tofixed.asp
+        timerDisplay.textContent = (timeToNext / 1000).toFixed(3);
+    }, 10);
 }
