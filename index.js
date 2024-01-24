@@ -728,6 +728,8 @@ function handleAnswer(e) {
     if (!eTarget.classList.contains("question-item")) {
         return;
     }
+    //Clear the timer interval 
+    clearInterval(interval);
     // Extract the text content of the clicked element (the chosen answer)
     const answer = eTarget.textContent;
     // Find the corresponding question in the pastQuestions array based on the id
