@@ -718,6 +718,10 @@ function renderQuestion(category, questions) {
     // Add an event listener to handle user's answer
     const answer = document.getElementById(question.id);
     answer.addEventListener("click", handleAnswer);
+    // Reset the timer for the next question
+    timeToNext = timer;
+    // // Create a new interval for the timer
+    interval = createInterval();
 }
 renderQuestion(category, questions);
 
