@@ -14,9 +14,13 @@ button {
     background-size: cover;
     padding: 2rem; 
     width: 100%; 
-    max-width: 1900px; 
+    max-width: 2000px; 
     box-sizing: border-box;
-    height: 100vh;
+    margin-bottom: 0px;
+    height: 100vh; 
+    @media (max-width: 2000px) {
+        height: auto; 
+    }
 }
 
 .container {
@@ -27,7 +31,7 @@ button {
 
 header {
     margin-top: 50px;
-    color: brown;
+    color: rgb(132, 20, 20);
     text-align:center;
 }
 
@@ -35,36 +39,43 @@ h1 {
     font-size: 50px;
     font-weight: bold;
     text-align: center;
+    margin-top: -20px;
     margin-bottom: 25px;
 }
 .main-wrapper {
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
-    color: brown;
+    color: rgb(132, 20, 20);
+    height: 67vh; 
 }
 
 h2 {
     font-size: 60px;
     font-weight: bold;
     margin-top: 400px;
-    margin-bottom: 200px;
+    margin-bottom: 50px;
+    padding: 0px; 
+    background-color: rgba(173, 173, 155, 0.547)
+}
+
+h3 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    padding: 10px; 
 }
 
 .start {
-    color: red;
+    color: brown;
     background-color: gold;
     text-align: center;
     font-size: 26px;
     padding: 20px 40px;
     margin-top: 20px;
     border-radius: 6px;
-    max-width: 400px;
+    max-width: 200px;
     width: 100%;
     display: inline-block;
 }
 
-h3 {
-    font-size: 32px;
-    font-weight: bold;
-}
