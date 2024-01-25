@@ -127,3 +127,10 @@ cursor: pointer;
     background-color:rgb(12, 12, 94);
     padding: 20px 40px;
 }
+
+
+#myAudio {
+    max-width: 250px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
