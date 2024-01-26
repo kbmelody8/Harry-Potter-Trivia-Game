@@ -1,4 +1,5 @@
 // Retrieve the 'score' value from the localStorage
+//The localStorage object saves key/value pairs in the browser.
 ////Reference: https://www.w3schools.com/jsref/prop_win_localstorage.asp
 const score = localStorage.getItem("score");
 

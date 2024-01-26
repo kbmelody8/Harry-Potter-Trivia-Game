@@ -797,7 +797,7 @@ function handleAnswer(e) {
 function createInterval() {
     // Set up a recurring timer using setInterval
     return setInterval(() => {
-        // Decrease the remaining time by 10 milliseconds
+        // Decrease the remaining time by 10 ms
         timeToNext -= 10;
         // Check if the remaining time has reached or gone below zero
         if (timeToNext <= 0) {
