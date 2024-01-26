@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Goblin+One&display=swap');
+
+body {
+    font-family: 'Goblin One', serif;
+}
+
 a {
     text-decoration: none;
     cursor: pointer;
@@ -39,42 +45,44 @@ h1 {
     font-size: 50px;
     font-weight: bold;
     text-align: center;
-    margin-top: -20px;
+    margin-top: -50px;
     margin-bottom: 25px;
 }
 .main-wrapper {
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
-    color: rgb(132, 20, 20);
+    color: rgba(4, 34, 100, 0.958);
     height: 67vh; 
 }
 
 h2 {
-    font-size: 60px;
+    font-size: 50px;
     font-weight: bold;
-    margin-top: 400px;
+    margin-top: 360px;
     margin-bottom: 50px;
     padding: 0px; 
     background-color: rgba(173, 173, 155, 0.547)
 }
 
 h3 {
-    font-size: 32px;
+    font-size: 20px;
     font-weight: bold;
-    margin-bottom: 30px;
-    padding: 10px; 
+    margin-bottom: 0px;
+    margin-top: -30px;
+    padding: 0px; 
+    background-color: rgba(173, 173, 155, 0.547)
 }
 
 .start {
-    color: brown;
-    background-color: gold;
+    color:gold;
+    background-color: rgb(19, 47, 129);
     text-align: center;
-    font-size: 26px;
+    font-size: 20px;
     padding: 20px 40px;
     margin-top: 20px;
     border-radius: 6px;
-    max-width: 200px;
+    max-width: 257px;
     width: 100%;
     display: inline-block;
 }

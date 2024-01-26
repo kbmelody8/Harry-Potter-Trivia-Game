@@ -52,3 +52,42 @@ btnPlay.addEventListener("click", (e) => {
     });
 
     
+    document.getElementById("playPauseBtn").addEventListener("click", toggleAudio);
+    document.getElementById("muteBtn").addEventListener("click", toggleMute);
+    document.getElementById("volumeUpBtn").addEventListener("click", volumeUp);
+    document.getElementById("volumeDownBtn").addEventListener("click", volumeDown);
+
+    function toggleAudio() {
+        const audio = document.getElementById("myAudio");
+        const audioButton = document.getElementById("playPauseBtn");
+
+        if (audio.paused) {
+            audio.play();
+            audioButton.textContent = "⏸";
+        } else {
+            audio.pause();
+            audioButton.textContent = "▶️";
+        }
+    }
+
+    function toggleMute() {
+        const audio = document.getElementById("myAudio");
+        const button = document.getElementById("muteBtn");
+    
+        if (audio.muted) {
+            audio.muted = false;
+            audioButton.textContent = "🔊";
+        } else {
+            audio.muted = true;
+            audioButton.textContent = "🔇";
+        }
+    }
+    function volumeUp() {
+    let audio = document.getElementById("myAudio");
+        audio.volume = Math.min(1, audio.volume + 0.1); 
+    }
+    
+    function volumeDown() {
+        let audio = document.getElementById("myAudio");
+        audio.volume = Math.max(0, audio.volume - 0.1); 
+    }
