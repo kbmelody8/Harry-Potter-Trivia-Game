@@ -9,6 +9,7 @@ let wrongAnswersCount = 0;
 // Counter for late answers
 let lateAnswers = 0;
 // Extracting the current page's URL
+//Reference: https://www.w3schools.com/js/js_window_location.asp
 const url = window.location.href.split("/").slice(-1);
 // Extracting the category from the URL
 const category = url[0].split(".")[0];

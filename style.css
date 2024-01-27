@@ -154,17 +154,12 @@ cursor: pointer;
     margin-bottom: 10px;
 }
 
-#playPauseBtn {
-    font-size: 28px;
-}
-
-#muteBtn {
-    font-size: 28px;
-}
-
+#playPauseBtn,
+#muteBtn,
 #volumeUpBtn,
 #volumeDownBtn {
     font-size: 28px;
+    margin: 5px;
 }
 
 .custom-audio {
@@ -196,7 +191,8 @@ cursor: pointer;
     #muteBtn,
     #volumeUpBtn,
     #volumeDownBtn {
-        font-size: 25px;
+        font-size: 15px;
+        margin: 5px;
     }
 
     #play {
