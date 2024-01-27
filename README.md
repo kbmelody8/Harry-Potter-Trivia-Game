@@ -10,6 +10,7 @@ https://github.com/kbmelody8/Karina-Baikanova-SEI-Project1.git
 3. Description and Technologies Used
 Harry Potter Trivia game is a web application built with HTML, CSS, and JavaScript. 
 The game features a user-friendly interface with a home screen for category selection, a dynamic game screen that displays questions, immediate feedback on correct or incorrect answers with distinctive colors, and a score screen showing the total points earned. The gameplay will include a 30-second timer for each question.
+This game is mobile-friendly.
 
 4. User stories
 •	As a Harry Potter fan, I want to choose from a variety of categories such as Spells, Characters, Houses, so that I can test my knowledge in specific areas of the wizarding world.
@@ -27,7 +28,7 @@ The game features a user-friendly interface with a home screen for category sele
 6. Unsolved Problems/Major Hurdles
 
 Unsolved Problems/Major Hurdles:
-Fortunately, I managed to implement everything outlined in my wireframes, so there aren't any unresolved issues per se. However, looking back, I believe there's always room for improvement, and I could have enhanced certain aspects further.
+Fortunately, I managed to implement everything outlined in my wireframes, so there aren't any unresolved issues per se. However, looking back, I believe there's always room for improvement, and I could have enhanced certain aspects further. Seems like the audio volume and down buttons don't work on mobile, but I am still not sure why as on a laptop the feature works fine.
 
 Major Hurdles:
 
