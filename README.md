@@ -30,6 +30,7 @@ Unsolved Problems/Major Hurdles:
 Fortunately, I managed to implement everything outlined in my wireframes, so there aren't any unresolved issues per se. However, looking back, I believe there's always room for improvement, and I could have enhanced certain aspects further.
 
 Major Hurdles:
+
 One significant challenge I faced was debugging the timer function. It seemed to intermittently skip questions or not provide enough time for players to respond, which was quite frustrating. I learned the importance of taking breaks and stepping away from the screen when encountering prolonged issues. Sometimes, a fresh perspective after a break can lead to a quicker resolution than persisting for hours on end.
 
 Additionally, I realized that incorporating a hint function could greatly improve the user experience. Providing players with hints or clues when they're stuck on a particularly challenging question could make the game more engaging and accessible.
