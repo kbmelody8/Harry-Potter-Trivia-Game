@@ -56,6 +56,11 @@ h1 {
     margin-bottom: 25px;
 }
 
+h2 {
+    font-size: 20px;
+    color: rgb(92, 194, 92);
+}
+
 h3 {
     font-size: 15px;
     font-weight: bold;
@@ -165,4 +170,38 @@ cursor: pointer;
 .custom-audio {
     margin-top: 10px;
     margin-bottom: 20px;
+}
+
+@media (max-width: 480px) {
+    .category {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+    h1 {
+        font-size: 22px;
+    }
+    h2,
+    h3, 
+    h4 {
+        font-size: 12px;
+    }
+    .instructions p,
+    .instructions {
+        font-size: 11px;
+    }
+    .category li {
+        font-size: 10px;
+    }
+    #playPauseBtn,
+    #muteBtn,
+    #volumeUpBtn,
+    #volumeDownBtn {
+        font-size: 25px;
+    }
+
+    #play {
+        font-size: 14px; 
+        padding: 10px 20px; 
+        border-radius: 16px; 
+    }
 }

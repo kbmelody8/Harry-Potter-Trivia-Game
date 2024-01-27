@@ -87,3 +87,38 @@ h3 {
     display: inline-block;
 }
 
+@media (max-width: 480px) {
+    .main-wrapper {
+        margin-left: 0;
+    }
+    .wrapper {
+        height: 113vh;
+        padding: 1rem;
+    }
+    h1 {
+        font-size:22px;
+    }
+
+    h2 {
+        font-size: 15px;
+        margin-top: 190px; 
+        margin-bottom: -50px; 
+        text-align: center;
+        padding: 5px;
+    }
+    h3 {
+        font-size: 15px;
+        margin-top: 80px; 
+        margin-bottom: 10px; 
+        text-align: center;
+        padding: 5px;
+    }
+
+    .start {
+        font-size: 16px; 
+        margin-top: 0px; 
+        text-align: center;
+        border-radius: 200px;
+        margin-bottom: -100px;
+    }
+}

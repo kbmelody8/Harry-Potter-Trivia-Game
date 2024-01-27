@@ -97,3 +97,47 @@ margin-bottom: 20px;
 font-weight: bold;
 background-color: rgba(173, 173, 155, 0.547)
 }
+
+@media (max-width: 480px) {
+    .main-wrapper {
+        margin-left: 0;
+    }
+    .wrapper {
+        height: auto;
+        padding: 1rem;
+    }
+    h1 {
+        font-size:22px;
+    }
+    .score-text {
+        font-size: 15px;
+        margin-top: 40px; 
+        margin-bottom: 30px; 
+        text-align: center;
+    }
+
+    h3 {
+        font-size: 15px;
+        margin-top: -20px; 
+        margin-bottom: 10px; 
+        text-align: center;
+        padding: 5px;
+    }
+
+    .start {
+        font-size: 16px; 
+        margin-top: 0px; 
+        text-align: center;
+        border-radius: 200px;
+        margin-bottom: -100px;
+    }
+    .main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 98vh;
+        margin-left: 70px;
+    }
+
+}
