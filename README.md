@@ -1,7 +1,8 @@
 1. Live website:
 https://kbmelody8.github.io/Karina-Baikanova-SEI-Project1/
 ![Trivia](./image/trivia-home.png)
-
+![Questions](./image/questions.png)
+![Score](./image/score.png)
 2. Installation Instructions
 To run the Trivia game locally, please clone the repository from GitHub:
 https://github.com/kbmelody8/Karina-Baikanova-SEI-Project1.git
