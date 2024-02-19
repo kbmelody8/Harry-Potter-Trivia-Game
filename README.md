@@ -1,5 +1,5 @@
 1. Live website:
-https://kbmelody8.github.io/Karina-Baikanova-SEI-Project1/
+https://kbmelody8.github.io/Harry-Potter-Trivia-Game/
 ![Trivia](./image/trivia-home.png)
 ![Questions](./image/questions.png)
 ![Score](./image/score.png)
